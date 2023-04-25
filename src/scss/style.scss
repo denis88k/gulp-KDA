@@ -1,6 +1,6 @@
 @import 'vars';
 @import 'mixins';
-@import 'fonts';
+@import './../fonts/fonts';
 @import 'reset';
 @import 'vendor';
 @import 'global';
@@ -11,5 +11,3 @@
 @import 'main';
 @import './components/footer';
 @import 'media';
-
-
