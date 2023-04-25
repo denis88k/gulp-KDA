@@ -1,0 +1,36 @@
+{
+  "name": "gulp-kda",
+  "version": "2.0.0",
+  "description": "Gulp - сборка KDA\r Gulp 4",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "html": "node-w3c-validator -f lint -evH -i app/**/*.html",
+    "dev": "gulp --dev",
+    "build": "gulp build --build",
+    "code": "editorconfig-checker",
+    "zip": "gulp zip --zip",
+    "cache": "gulp cache",
+    "backend": "gulp backend"
+  },
+  "author": "KDA",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.29.1",
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-file-include": "^2.3.0",
+    "gulp-group-css-media-queries": "^1.2.2",
+    "gulp-if": "^3.0.0",
+    "gulp-imagemin": "^8.0.0",
+    "gulp-newer": "^1.4.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-sass": "^5.1.0",
+    "gulp-svg-sprite": "^2.0.3",
+    "gulp-typograf": "^4.1.0",
+    "gulp-webp": "^4.0.1",
+    "gulp-webp-html-nosvg": "^1.1.1"
+  }
+}
