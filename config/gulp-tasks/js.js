@@ -36,7 +36,14 @@ export const scripts = () => {
          console.error('WEBPACK ERROR', error)
          this.emit('end')
       })
-      .pipe(app.plugins.if(app.isBuild, uglify()))
+      .pipe(app.plugins.if(app.isBuild, uglify()
+         .on('error',
+            app.plugins.notify.onError({
+               title: "uglify",
+               message: "Error: <%= error.message %>"
+            })
+         )
+      ))
       .pipe(dest(app.path.build.js))
       .pipe(app.plugins.browserSync.stream())
 }

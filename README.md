@@ -41,25 +41,21 @@ npm i -D gulp-ttf2woff2
 npm i -D gulp-svgmin
 npm i -D gulp-version-number
 npm i -D gulp-zip
-
-
 npm i -D webpack
 npm i -D webpack-stream
-
 npm i -D babel-loader @babel/core @babel/preset-env webpack
-"@babel/core": "^7.16.7",
-"@babel/preset-env": "^7.16.7",
-"babel-loader": "^8.2.3",
-
 npm i -D editorconfig-checker
+npm i -D gulp-uglify-es
+npm i -D gulp-rename
+npm i -D stylelint
+
+
 
 "stylelint": "^14.2.0",
 "stylelint-config-standard-scss": "^3.0.0",
 "stylelint-order": "^5.0.0",
 
 
-npm i -D gulp-uglify-es
 
-npm i -D gulp-rename
 
 
