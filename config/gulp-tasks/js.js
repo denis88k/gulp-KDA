@@ -1,4 +1,5 @@
 import webpackStream from 'webpack-stream'
+import uglify from 'gulp-uglify-es'
 
 export const scripts = () => {
    return app.src(app.path.src.js)
@@ -35,6 +36,7 @@ export const scripts = () => {
          console.error('WEBPACK ERROR', error)
          this.emit('end')
       })
+      .pipe(app.plugins.if(app.isBuild, uglify()))
       .pipe(dest(app.path.build.js))
       .pipe(app.plugins.browserSync.stream())
 }
