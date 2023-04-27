@@ -81,8 +81,10 @@ npm i -D stylelint-config-prettier-scss - увидел, когда искал з
 Синхронизация StyleLint и SCSS/SASS
 npm i -D stylelint-config-standard-scss
 
+
+npm i eslint-config-airbnb-base -D
+
+для react
 npm i -D stylelint-config-styled-components stylelint-processor-styled-components
 stylelint-config-styled-components — эта общая конфигурация автоматически отключит правила, вызывающие неразрешимые конфликты.
 stylelint-processor-styled-components — пакет для настройки парсера StyleLint, который будет автоматически определять стилизованные компоненты.
-
-npm i eslint-config-airbnb-base -D
