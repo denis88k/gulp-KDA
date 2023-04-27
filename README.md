@@ -15,7 +15,7 @@ gulp build - команда для продакшн-сборки проекта.
 npm run dev
 npm run build
 
-!!!!"html": "node-w3c-validator -f lint -evH -i app/**/*.html", - здесь будет не папка app, а название проекта
+!!!!"html": "node-w3c-validator -f lint -evH -i app/\*_/_.html", - здесь будет не папка app, а название проекта
 
 npm i gulp-cli -g
 npm i -D gulp
@@ -49,13 +49,40 @@ npm i -D gulp-uglify-es
 npm i -D gulp-rename
 npm i -D stylelint
 
+настройка линтеров
+https://tproger.ru/articles/podgotovka-okruzhenija-react-prilozhenija-vscode-prettier-eslint-stylelint-husky/
+настройки по stylelint
+https://github.com/stylelint-scss/stylelint-scss
+npm i -D prettier eslint-config-prettier eslint-plugin-prettier
+prettier — сам форматер.
+eslint-config-prettier — отключает правила, которые могут конфликтовать с prettier.
+eslint-plugin-prettier — даёт возможность отображать ошибки связанные с правилами prettier.
+"extends": ["react-app", "react-app/jest"],
 
+npm i -D eslint-plugin-import
+eslint-plugin-import — Данный плагин добавит в ваш проект проверки для импортов и будет следить за тем, чтобы все импортируемые зависимости присутствовали в проекте, подключались в удобном для последующей работы порядке и так далее. Он также входит в CRA.
 
-"stylelint": "^14.2.0",
-"stylelint-config-standard-scss": "^3.0.0",
-"stylelint-order": "^5.0.0",
+npm i -D stylelint stylelint-config-standard stylelint-config-clean-order
 
+stylelint — сам линтер.
+stylelint-config-standard — содержит согласованные правила написания стилей.
+stylelint-order — отвечает за настройку приоритетов и группировки стилей.
+stylelint-config-clean-order — правила для написания стилей в правильном порядке. Если есть желание узнать в каком порядке пишутся стили, то можно посмотреть здесь.
 
+"stylelint": "^15.6.0",
+"stylelint-order": "^6.0.3",
+"stylelint-config-standard-scss": "^9.0.0",
 
+Синхронизация StyleLint и Prettier
+npm i -D stylelint-config-prettier - устарело в stylelint v15
+stylelint-config-prettier — отключает все правила, которые могут конфликтовать с Prettier.
+npm i -D stylelint-config-prettier-scss - увидел, когда искал замену верхнему плагину
 
+Синхронизация StyleLint и SCSS/SASS
+npm i -D stylelint-config-standard-scss
 
+npm i -D stylelint-config-styled-components stylelint-processor-styled-components
+stylelint-config-styled-components — эта общая конфигурация автоматически отключит правила, вызывающие неразрешимые конфликты.
+stylelint-processor-styled-components — пакет для настройки парсера StyleLint, который будет автоматически определять стилизованные компоненты.
+
+npm i eslint-config-airbnb-base -D

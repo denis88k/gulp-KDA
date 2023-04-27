@@ -1,13 +1,13 @@
 // переменные
-$minwidth: 320px;
+$minWidth: 320px;
 $pd: 30px;
-$maxWidthContainer: 1170;
-$md1: $maxWidthContainer + $pd;
+$maxWidthContainer: 1170px;
+$md1: #{$maxWidthContainer} + #{$pd};
 
 html,
 body {
   height: 100%;
-  min-width: $minwidth;
+  min-width: #{$minWidth};
 }
 
 body {
@@ -26,7 +26,7 @@ body {
 
 .container {
   margin: 0 auto;
-  padding: 0 calc($pd / 2);
+  padding: 0 calc(#{$pd} / 2);
   max-width: $md1;
 }
 

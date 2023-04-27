@@ -1,4 +1,2 @@
-// @include('files/scripts.js', {})
-
-import './vendor/vendors' // сторонние бибилиотеки
+import './vendor/vendors' // сторонние библиотеки
 import './components' // то, что пишется своими ручками
