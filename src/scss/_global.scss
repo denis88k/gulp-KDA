@@ -6,51 +6,51 @@ $md1: #{$maxWidthContainer} + #{$pd};
 
 html,
 body {
-    height: 100%;
-    min-width: #{$minWidth};
+  height: 100%;
+  min-width: #{$minWidth};
 }
 
 body {
-    &._lock {
-        overflow: hidden;
-    }
+  &._lock {
+    overflow: hidden;
+  }
 }
 
 .wrapper {
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    width: 100%;
-    min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  width: 100%;
+  min-height: 100%;
 }
 
 .container {
-    margin: 0 auto;
-    padding: 0 calc(#{$pd} / 2);
-    max-width: $md1;
+  margin: 0 auto;
+  padding: 0 calc(#{$pd} / 2);
+  max-width: $md1;
 }
 
 .main {
-    flex: 1 1 auto;
+  flex: 1 1 auto;
 }
 
 .footer {
-    flex: 0 0 auto;
+  flex: 0 0 auto;
 }
 
 .ibg {
-    position: relative;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 
-    img {
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 0;
-        height: 0;
-        opacity: 0;
-        visibility: hidden;
-    }
+  img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    visibility: hidden;
+  }
 }
