@@ -1,5 +1,5 @@
-import webpackStream from 'webpack-stream'
 import uglify from 'gulp-uglify-es'
+import webpackStream from 'webpack-stream'
 
 export const scripts = () => {
   return app

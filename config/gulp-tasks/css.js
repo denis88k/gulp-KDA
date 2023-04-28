@@ -1,10 +1,11 @@
-import dartSass from 'sass'
-import gulpSass from 'gulp-sass'
-const scss = gulpSass(dartSass)
-// import concat from 'gulp-concat'
-import group_media_css from 'gulp-group-css-media-queries' // объединяет все схожие media запросы
 import autoprefixer from 'gulp-autoprefixer'
+import group_media_css from 'gulp-group-css-media-queries' // объединяет все схожие media запросы
 import rename from 'gulp-rename'
+import gulpSass from 'gulp-sass'
+import dartSass from 'sass'
+const scss = gulpSass(dartSass)
+
+// import concat from 'gulp-concat'
 // вместо concat стоит применить rename
 
 export const css = () => {

@@ -3,10 +3,11 @@ const anyThink = () => {
   console.log('ane')
   return { a }
 }
+
 anyThink()
 
 const a = document.querySelector('a')
-a.addEventListener('click', (e) => {
+a.addEventListener('click', e => {
   anyThink()
   console.log(e.target.value)
 })

@@ -1,7 +1,7 @@
 import fileinclude from 'gulp-file-include' // объединение html файлов написанных через _*.html(нижнее подчеркивание)
-import webpHtmlNosvg from 'gulp-webp-html-nosvg' //добавляет вместо img тэг picture(img. source) с основным форматом и с форматом webp
 import typograf from 'gulp-typograf' // для исправления типографических ошибок, переносов и тд
 import versionNumber from 'gulp-version-number' // для добавления кэша на css и js
+import webpHtmlNosvg from 'gulp-webp-html-nosvg' //добавляет вместо img тэг picture(img. source) с основным форматом и с форматом webp
 
 export const html = () => {
   return app

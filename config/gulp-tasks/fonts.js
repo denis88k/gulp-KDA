@@ -1,6 +1,7 @@
-import fs from 'fs'
 import fonter from 'gulp-fonter'
 import ttf2woff2 from 'gulp-ttf2woff2'
+
+import fs from 'fs'
 
 export const otfToTtf = () => {
   // Ищем файлы шрифтов .otf
