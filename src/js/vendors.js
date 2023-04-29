@@ -1,1 +1,1 @@
-import './swiper-bundle.min'
+import { swiper } from './swiper-bundle.min';

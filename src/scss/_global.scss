@@ -37,20 +37,3 @@ body {
 .footer {
   flex: 0 0 auto;
 }
-
-.ibg {
-  position: relative;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-
-  img {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 0;
-    height: 0;
-    opacity: 0;
-    visibility: hidden;
-  }
-}

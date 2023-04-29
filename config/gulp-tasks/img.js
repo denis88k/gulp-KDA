@@ -1,7 +1,7 @@
-import imagemin from 'gulp-imagemin'
-import webp from 'gulp-webp'
+import imagemin from 'gulp-imagemin';
+import webp from 'gulp-webp';
 
-export const images = () => {
+export const img = () => {
   return app
     .src(app.path.src.img)
     .pipe(
@@ -31,5 +31,5 @@ export const images = () => {
         ]),
       ),
     )
-    .pipe(app.dest(app.path.build.img))
-}
+    .pipe(app.dest(app.path.build.img));
+};

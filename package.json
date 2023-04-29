@@ -5,10 +5,9 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "html": "node-w3c-validator -f lint -evH -i app/**/*.html",
+    "html": "node-w3c-validator -f lint -evH -i dist/**/*.html",
     "dev": "gulp --dev",
     "build": "gulp build --build",
-    "code": "editorconfig-checker",
     "zip": "gulp zip --build",
     "cache": "gulp cache",
     "backend": "gulp backend"
@@ -21,11 +20,9 @@
     "babel-loader": "^9.1.2",
     "browser-sync": "^2.29.1",
     "del": "^6.0.0",
-    "editorconfig-checker": "^5.0.1",
     "eslint": "^8.39.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-prettier": "^8.8.0",
-    "eslint-import-resolver-node": "^0.3.7",
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-prettier": "^4.2.1",
     "gulp": "^4.0.2",

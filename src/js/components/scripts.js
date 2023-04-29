@@ -1,22 +1,22 @@
 const anyThink = () => {
-  const a = { f }
-  console.log('ane')
-  return { a }
-}
+  const a = { f };
+  console.log('ane');
+  return { a };
+};
 
-anyThink()
+anyThink();
 
-const a = document.querySelector('a')
+const a = document.querySelector('a');
 a.addEventListener('click', e => {
-  anyThink()
-  console.log(e.target.value)
-})
-a.classList.add('f')
+  anyThink();
+  console.log(e.target.value);
+});
+a.classList.add('f');
 
-const qwe = 12.432
-qwe.toFixed(2)
+const qwe = 12.432;
+qwe.toFixed(2);
 
 const aq = {
   b: 1,
   c: b,
-}
+};

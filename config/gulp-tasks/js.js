@@ -1,7 +1,7 @@
-import uglify from 'gulp-uglify-es'
-import webpackStream from 'webpack-stream'
+import uglify from 'gulp-uglify-es';
+import webpackStream from 'webpack-stream';
 
-export const scripts = () => {
+export const js = () => {
   return app
     .src(app.path.src.js)
     .pipe(
@@ -43,8 +43,8 @@ export const scripts = () => {
       }),
     )
     .on('error', function (error) {
-      console.error('WEBPACK ERROR', error)
-      this.emit('end')
+      console.error('WEBPACK ERROR', error);
+      this.emit('end');
     })
     .pipe(
       app.plugins.if(
@@ -59,5 +59,5 @@ export const scripts = () => {
       ),
     )
     .pipe(dest(app.path.build.js))
-    .pipe(app.plugins.browserSync.stream())
-}
+    .pipe(app.plugins.browserSync.stream());
+};

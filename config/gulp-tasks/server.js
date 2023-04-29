@@ -5,5 +5,5 @@ export const browsersync = () => {
     },
     notify: true,
     port: 3000,
-  })
-}
+  });
+};

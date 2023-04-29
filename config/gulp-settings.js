@@ -1,8 +1,10 @@
 // Получаем имя папки проекта в которой работаем
-import * as nodePath from 'path'
-const projectFolder = nodePath.basename(nodePath.resolve())
+// import * as nodePath from 'path';
+// const projectFolder = nodePath.basename(nodePath.resolve());
+const projectFolder = './dist';
+
 // папка с исходниками
-const sourceFolder = './src'
+const sourceFolder = './src';
 
 export const path = {
   src: {
@@ -33,4 +35,4 @@ export const path = {
   clean: projectFolder,
   buildFolder: projectFolder,
   sourceFolder: sourceFolder,
-}
+};

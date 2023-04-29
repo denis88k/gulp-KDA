@@ -1,8 +1,8 @@
-import del from 'del'
-import zipPlugin from 'gulp-zip'
+import del from 'del';
+import zipPlugin from 'gulp-zip';
 
 export const zip = () => {
-  del(`./${app.path.projectFolder}.zip`)
+  del(`./${app.path.projectFolder}.zip`);
   return app
     .src(`${app.path.projectFolder}/**/*.*`, {})
     .pipe(
@@ -14,5 +14,5 @@ export const zip = () => {
       ),
     )
     .pipe(zipPlugin(`${app.path.projectFolder}.zip`))
-    .pipe(app.dest('./'))
-}
+    .pipe(app.dest('./'));
+};
