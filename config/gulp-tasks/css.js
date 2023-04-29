@@ -5,7 +5,7 @@ import gulpSass from 'gulp-sass';
 import dartSass from 'sass';
 const scss = gulpSass(dartSass);
 
-// import concat from 'gulp-concat'
+// import concat from 'gulp-concat';
 // вместо concat стоит применить rename
 
 export const css = () => {
@@ -21,13 +21,21 @@ export const css = () => {
         ),
       )
       .pipe(
-        scss(
-          { outputStyle: 'compressed' }, // сжатая версия
+        app.plugins.if(
+          app.isBuild,
+          scss(
+            { outputStyle: 'compressed' }, // сжатая версия
+          ),
         ),
       )
-      // .pipe(scss(
-      //    { outputStyle: 'expanded' } // не сжатая версия
-      // ))
+      .pipe(
+        app.plugins.if(
+          app.isDev,
+          scss(
+            { outputStyle: 'expanded' }, // не сжатая версия
+          ),
+        ),
+      )
       // .pipe(concat('style.css'))
       // .pipe(concat('style.min.css'))
       .pipe(app.plugins.if(app.isBuild, group_media_css()))

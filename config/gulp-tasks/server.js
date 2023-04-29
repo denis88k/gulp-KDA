@@ -1,7 +1,7 @@
-export const browsersync = () => {
+export const server = () => {
   app.plugins.browserSync.init({
     server: {
-      baseDir: `./${projectFolder}/`,
+      baseDir: `./${app.path.buildFolder}/`,
     },
     notify: true,
     port: 3000,

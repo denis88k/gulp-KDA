@@ -2,7 +2,8 @@ import svgSprite from 'gulp-svg-sprite';
 import svgMin from 'gulp-svgmin';
 
 export const svgSprites = () => {
-  return src(app.path.src.svg)
+  return app
+    .src(app.path.src.svg)
     .pipe(
       app.plugins.plumber(
         app.plugins.notify.onError({

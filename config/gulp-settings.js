@@ -1,10 +1,10 @@
 // Получаем имя папки проекта в которой работаем
-// import * as nodePath from 'path';
-// const projectFolder = nodePath.basename(nodePath.resolve());
-const projectFolder = './dist';
-
-// папка с исходниками
-const sourceFolder = './src';
+import * as nodePath from 'path';
+// папка с результатом
+const projectFolder = nodePath.basename(nodePath.resolve());
+// const buildFolder = `./dist`;
+const buildFolder = `${projectFolder}`;
+const sourceFolder = './src'; // папка с исходниками
 
 export const path = {
   src: {
@@ -32,7 +32,8 @@ export const path = {
     svg: [sourceFolder + '/img/svg/**/*.svg'],
     files: sourceFolder + '/files/*.*',
   },
-  clean: projectFolder,
-  buildFolder: projectFolder,
+  clean: buildFolder,
+  buildFolder: buildFolder,
+  projectFolder: projectFolder,
   sourceFolder: sourceFolder,
 };

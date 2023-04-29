@@ -8,9 +8,14 @@ js - min
 fonts - ....
 
 Команды:
-npm i - установка всех зависимостей, находящихся в package.json
-gulp - базовая команда, которая запускает сборку для разработки, используя browser-sync
-gulp build - команда для продакшн-сборки проекта. Все ассеты сжаты и оптимизированы для выкладки на хостинг.
+
+`npm run dev` (gulp --dev) - базовая команда, которая запускает сборку для разработки, используя browser-sync
+
+`npm run build` (gulp build --build) - команда для продакшн-сборки проекта. Все ассеты сжаты и оптимизированы для выкладки на хостинг.
+
+`npm run cache` (gulp cache) - команда, которую стоит запускать после `gulp build`, если вам нужно загрузить новые файлы на хостинг без кэширования.
+
+`npm run zip` (gulp zip --build)- команда собирает ваш готовый код в zip-архив.
 
 npm run dev
 npm run build
@@ -23,11 +28,13 @@ npm i -D gulp-file-include
 npm i -D del
 npm i -D gulp-typograf
 npm i -D gulp-if
+npm i -D sass
 npm i -D gulp-sass
 npm i -D gulp-autoprefixer
 npm i -D browser-sync
 npm i -D gulp-concat
 npm i -D gulp-newer
+npm i -D gulp-notify
 npm i -D gulp-imagemin
 npm i -D gulp-svg-sprite
 npm i -D gulp-svg-sprite
@@ -44,15 +51,17 @@ npm i -D gulp-zip
 npm i -D webpack
 npm i -D webpack-stream
 npm i -D babel-loader @babel/core @babel/preset-env webpack
+npm i -D terser-webpack-plugin
 npm i -D editorconfig-checker
 npm i -D gulp-uglify-es
 npm i -D gulp-rename
-npm i -D stylelint
 
 настройка линтеров
 https://tproger.ru/articles/podgotovka-okruzhenija-react-prilozhenija-vscode-prettier-eslint-stylelint-husky/
+
 настройки по stylelint
 https://github.com/stylelint-scss/stylelint-scss
+
 npm i -D prettier eslint-config-prettier eslint-plugin-prettier
 prettier — сам форматер.
 eslint-config-prettier — отключает правила, которые могут конфликтовать с prettier.

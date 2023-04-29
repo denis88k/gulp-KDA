@@ -1,12 +1,14 @@
+console.log('scripts');
+
 const anyThink = () => {
-  const a = { f };
+  const a = { f: 123 };
   console.log('ane');
   return { a };
 };
 
 anyThink();
 
-const a = document.querySelector('a');
+const a = document.querySelector('.click');
 a.addEventListener('click', e => {
   anyThink();
   console.log(e.target.value);
@@ -18,5 +20,5 @@ qwe.toFixed(2);
 
 const aq = {
   b: 1,
-  c: b,
+  c: 'b',
 };

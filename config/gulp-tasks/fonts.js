@@ -7,7 +7,7 @@ export const otfToTtf = () => {
   // Ищем файлы шрифтов .otf
   return (
     app
-      .src(`${app.path.srcFolder}/fonts/*.otf`, {})
+      .src(`${app.path.sourceFolder}/fonts/*.otf`, {})
       .pipe(
         app.plugins.plumber(
           app.plugins.notify.onError({
@@ -23,14 +23,14 @@ export const otfToTtf = () => {
         }),
       )
       // Выгружаем в исходную папку
-      .pipe(app.dest(`${app.path.srcFolder}/fonts/`))
+      .pipe(app.dest(`${app.path.sourceFolder}/fonts/`))
   );
 };
 export const ttfToWoff = () => {
   // Ищем файлы шрифтов .ttf
   return (
     app
-      .src(`${app.path.srcFolder}/fonts/*.ttf`, {})
+      .src(`${app.path.sourceFolder}/fonts/*.ttf`, {})
       .pipe(
         app.plugins.plumber(
           app.plugins.notify.onError({
@@ -48,7 +48,7 @@ export const ttfToWoff = () => {
       // Выгружаем в папку с результатом
       .pipe(app.dest(`${app.path.build.fonts}`))
       // Ищем файлы шрифтов .ttf
-      .pipe(app.src(`${app.path.srcFolder}/fonts/*.ttf`))
+      .pipe(app.src(`${app.path.sourceFolder}/fonts/*.ttf`))
       // Конвертируем в .woff2
       .pipe(ttf2woff2())
       // Выгружаем в папку с результатом
@@ -56,7 +56,7 @@ export const ttfToWoff = () => {
   );
 };
 export const fontsStyle = () => {
-  let fontsFile = `${app.path.srcFolder}/scss/fonts/fonts.scss`;
+  let fontsFile = `${app.path.sourceFolder}/scss/fonts/fonts.scss`;
   // Если передан флаг --rewrite удаляем файл подключения шрифтов
   // app.isFontsReW ? fs.unlink(fontsFile, cb) : null ///??????????????
   // Проверяем существуют ли файлы шрифтов
@@ -67,7 +67,7 @@ export const fontsStyle = () => {
         // Если файла нет, создаем его
         fs.writeFile(fontsFile, '', cb);
         let newFileOnly;
-        for (var i = 0; i < fontsFiles.length; i++) {
+        for (let i = 0; i < fontsFiles.length; i++) {
           // Записываем подключения шрифтов в файл стилей
           let fontFileName = fontsFiles[i].split('.')[0];
           if (newFileOnly !== fontFileName) {
@@ -109,6 +109,6 @@ export const fontsStyle = () => {
       fs.unlink(fontsFile, cb);
     }
   });
-  return app.src(`${app.path.srcFolder}`);
+  return app.src(`${app.path.sourceFolder}`);
 };
 function cb() {}

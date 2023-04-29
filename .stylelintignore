@@ -6,3 +6,5 @@
 *.svg
 *.html
 /node_modules
+/css/style.css
+/css/style.min.css

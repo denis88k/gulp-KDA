@@ -1,6 +1,7 @@
 @import 'vars';
 @import 'mixins';
-@import './../fonts/fonts';
+
+// @import './../fonts/fonts';
 @import 'reset';
 @import 'vendor';
 @import 'global';
@@ -8,6 +9,6 @@
 // components
 
 @import './components/header';
-@import 'main';
+@import './components/main';
 @import './components/footer';
 @import 'media';

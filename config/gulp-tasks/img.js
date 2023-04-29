@@ -1,4 +1,4 @@
-import imagemin from 'gulp-imagemin';
+import imagemin, { gifsicle, mozjpeg, optipng, svgo } from 'gulp-imagemin';
 import webp from 'gulp-webp';
 
 export const img = () => {
@@ -12,7 +12,7 @@ export const img = () => {
         }),
       ),
     )
-    .pipe(app.plugins.newer(path.build.img))
+    .pipe(app.plugins.newer(app.path.build.img))
     .pipe(
       webp({
         quality: 86,
@@ -23,11 +23,11 @@ export const img = () => {
     .pipe(app.plugins.newer(app.path.build.img))
     .pipe(
       app.plugins.if(
-        isBuild,
+        app.isBuild,
         imagemin([
-          imagemin.gifsicle({ interlaced: true }),
-          imagemin.mozjpeg({ quality: 80, progressive: true }),
-          imagemin.optipng({ optimizationLevel: 2 }),
+          gifsicle({ interlaced: true }),
+          mozjpeg({ quality: 80, progressive: true }),
+          optipng({ optimizationLevel: 5 }),
         ]),
       ),
     )

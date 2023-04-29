@@ -1,7 +1,8 @@
-import uglify from 'gulp-uglify-es';
+import TerserPlugin from 'terser-webpack-plugin';
+import webpack from 'webpack';
 import webpackStream from 'webpack-stream';
 
-export const js = () => {
+export const script = () => {
   return app
     .src(app.path.src.js)
     .pipe(
@@ -15,6 +16,10 @@ export const js = () => {
     .pipe(
       webpackStream({
         mode: app.isBuild ? 'production' : 'development',
+        optimization: {
+          minimize: app.isBuild ? true : false,
+          minimizer: [app.isBuild ? new TerserPlugin() : '...'],
+        },
         output: {
           filename: 'main.min.js',
         },
@@ -41,23 +46,13 @@ export const js = () => {
         },
         devtool: app.isDev ? 'source-map' : false,
       }),
+      webpack,
     )
     .on('error', function (error) {
       console.error('WEBPACK ERROR', error);
       this.emit('end');
     })
-    .pipe(
-      app.plugins.if(
-        app.isBuild,
-        uglify().on(
-          'error',
-          app.plugins.notify.onError({
-            title: 'uglify',
-            message: 'Error: <%= error.message %>',
-          }),
-        ),
-      ),
-    )
-    .pipe(dest(app.path.build.js))
+
+    .pipe(app.dest(app.path.build.js))
     .pipe(app.plugins.browserSync.stream());
 };
