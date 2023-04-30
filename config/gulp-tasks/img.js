@@ -1,4 +1,4 @@
-import imagemin, { gifsicle, mozjpeg, optipng, svgo } from 'gulp-imagemin';
+import imagemin, { gifsicle, mozjpeg, optipng } from 'gulp-imagemin';
 import webp from 'gulp-webp';
 
 export const img = () => {

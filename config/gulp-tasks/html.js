@@ -1,6 +1,6 @@
 import fileinclude from 'gulp-file-include'; // объединение html файлов написанных через _*.html (нижнее подчеркивание)
 import typograf from 'gulp-typograf'; // для исправления типографических ошибок, переносов и тд
-import versionNumber from 'gulp-version-number'; // для добавления кэша на css и js
+// import versionNumber from 'gulp-version-number'; // для добавления кэша на css и js
 import webpHtmlNosvg from 'gulp-webp-html-nosvg'; //добавляет вместо img тэг picture(img. source) с основным форматом и с форматом webp
 
 export const html = () => {
@@ -15,7 +15,6 @@ export const html = () => {
           }),
         ),
       )
-      .pipe(app.plugins.newer(app.path.build.html))
       .pipe(
         fileinclude({
           prefix: '@',

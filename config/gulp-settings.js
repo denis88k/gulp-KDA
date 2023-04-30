@@ -17,12 +17,12 @@ export const path = {
     files: sourceFolder + '/files/*.*',
   },
   build: {
-    html: projectFolder + '/',
-    css: projectFolder + '/css/',
-    js: projectFolder + '/js/',
-    img: projectFolder + '/img/',
-    fonts: projectFolder + '/fonts/',
-    files: projectFolder + '/files/',
+    html: buildFolder + '/',
+    css: buildFolder + '/css/',
+    js: buildFolder + '/js/',
+    img: buildFolder + '/img/',
+    fonts: buildFolder + '/fonts/',
+    files: buildFolder + '/files/',
   },
   watch: {
     html: sourceFolder + '/html/**/*.html',

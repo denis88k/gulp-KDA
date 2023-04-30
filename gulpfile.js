@@ -1,5 +1,4 @@
 // Импорт основного модуля
-// import { dest, parallel, series, src, watch } from 'gulp';
 import gulp from 'gulp';
 const parallel = gulp.parallel;
 const series = gulp.series;
@@ -14,7 +13,6 @@ import { path } from './config/gulp-settings.js';
 global.app = {
   isBuild: process.argv.includes('--build'),
   isDev: process.argv.includes('--dev'),
-  isCache: process.argv.includes('--cache'),
   dest: gulp.dest,
   src: gulp.src,
   path,

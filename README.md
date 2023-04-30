@@ -30,6 +30,7 @@ npm i -D gulp-typograf
 npm i -D gulp-if
 npm i -D sass
 npm i -D gulp-sass
+npm i -D gulp-clean-css
 npm i -D gulp-autoprefixer
 npm i -D browser-sync
 npm i -D gulp-concat
